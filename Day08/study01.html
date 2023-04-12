@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <style>
+            /*table을 이용한 가로배치의 경우 border-spacing과 td의 padding을 조절해야 빈칸이 없다.*/
+            #T{
+                border:10px solid black;
+                width:200px;
+                margin: 0 auto;
+
+            }
+            table{
+                border-spacing: 0;
+            }
+            td{
+                padding:0;
+                width:50px;
+                height:50px;
+                
+            }
+            .red{
+                background-color: rgba(255, 0, 0, 0.5);
+                height:50px;
+
+            }
+            .blue{
+                background-color:  rgba(0,0,255,0.5);
+                height:50px;
+            }
+            .green{
+                background-color: rgba(0,255,0,0.5);
+                height:50px;
+            }
+            .yellow{
+                background-color: rgba(255,255,0,0.5);
+                height:50px;
+            }
+            #F{
+                border:10px solid red;
+                width:200px;
+                margin:0 auto;
+            }
+            #F div{
+                width:50px;
+                height:50px;
+                float:left;
+            }
+            /*float을 시키면 배경면적이 사라지는 효과가 발생한다.*/
+            /*#F div.red, #F div.blue, #F div.green, #F div.yellow{
+                float:left;
+            }*/
+            /*아래 clearfix소스를 배경after위치에 적용하면 배경 면적을 유지할 수 있다.*/
+            /*본 방식으로 처리하게 되면 반응형을 제작할 때 유리하게 사용할 수 있다.*/
+            #F::after{
+                content:"";
+                display:block;
+                clear:both;
+            }
+            /*inline 태그들은 line을 유지하는 성격*/
+            /*면적을 가질 수 없다*/
+            #I{
+                border:10px solid blue;
+                width:200px;
+                margin:0 auto;
+                font-size: 0;
+
+            }
+            /*띄어쓰기가 생기는 문제 -> font-size:0*/
+            #I div{
+                width:50px;
+                height:50px;
+                display:inline-block;
+                font-size:1rem;
+            }
+        </style>
+    </head>
+    <body>
+        
+        <div id="T">
+            <table>
+                <caption></caption>
+                <tr>
+                    <td><div class="red"></div></td>
+                    <td><div class="blue"></div></td>
+                    <td><div class="green"></div></td>
+                    <td><div class="yellow"></div></td>
+                </tr>
+            </table>
+        </div>
+        <div id="F">
+            <div class="red"></div>
+            <div class="blue"></div>
+            <div class="green"></div>
+            <div class="yellow"></div>
+        </div>
+        <div id="I">
+            <div class="red">1</div>
+            <div class="blue">2</div>
+            <div class="green">3</div>
+            <div class="yellow">4</div>
+        </div>
+        동해물과 <b>백두산</b>이 마르고 닳도록 하느님이 보우하사 우리나라 만세
+    </body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <style>
+            fieldset{
+                width:400px;
+                margin: 0 auto;
+            }
+        </style>
+    </head>
+    <body>
+        <!--<form action="">-->
+            <fieldset>
+                <legend>체크박스</legend>
+                <input type="checkbox" id="java" name="checkbox" value="JAVA" ><label for="java">JAVA</label>
+                <input type="checkbox" id="android" name="checkbox" value="ANDROID" ><label for="android">ANDROID</label>
+                <input type="checkbox" id="css" name="checkbox" value="CSS"><label for="css">CSS</label>
+                <br>
+                <input type="checkbox" id="html" name="checkbox" value="HTML"><label for="html">HTML</label>
+                <input type="checkbox" id="iot" name="checkbox" value="IOT"><label for="iot">IOT</label>
+                <input type="checkbox" id="javascript" name="checkbox" value="JAVASCRIPT"><label for="css">JAVASCRIPT</label>
+            </fieldset>
+            <fieldset>
+                <legend>셀렉트</legend>
+                <select name="selection">
+                    <option value="JAVA">JAVA</option>
+                    <option value="ANDROID">ANDROID</option>
+                    <option value="CSS">CSS</option>
+                    <option value="HTML">HTML</option>
+                    <option value="IOT">IOT</option>
+                    <option value="JAVASCRIPT">JAVASCRIPT</option>
+                </select>
+            </fieldset>
+            <fieldset>
+                <legend>버튼</legend>
+                <!--<input type="submit" value="전송">-->
+                <input type="button" value="전송" id="btn">
+                <!--<button onclick="newChecked(); return false;">전송</button>-->
+            </fieldset>
+            <fieldset>
+                <legend>출력영역</legend>
+                <p id="result1">체크내용 : <span id="checked"></span>
+                    <!--<span id="javachecked">JAVA</span>
+                    <span id="andchecked">ANDROID</span>
+                    <span id="csschecked">CSS</span>
+                    <span id="htmlchecked">HTML</span>
+                    <span id="iotchecked">IOT</span>
+                    <span id="jschecked">JAVASCRIPT</span>-->
+                </p>
+                <p id="result2">셀렉트내용 : 
+                    <!--<span id="iotselected">IOT</span>
+                    <span id="javaselected">IOT</span>
+                    <span id="andselected">IOT</span>
+                    <span id="cssselected">IOT</span>
+                    <span id="htmlselected">IOT</span>
+                    <span id="jsselected">IOT</span>-->
+                </p>
+            </fieldset>
+            <script>
+                let button = document.getElementById("btn");
+                button.addEventListener("click", function(){
+                    let checks=document.getElementsByTagName("fieldset");
+                    let inner1=checks[0].getElementsByTagName("input");
+                    let inner2=checks[1].getElementsByTagName("select");
+                    console.log(inner2);
+                    let str1 = "체크내용 : "
+                    let str2 = "셀렉트내용 : "
+                    for(const element of inner1){
+                        if(element.checked){
+                            str1+=element.value + " ";
+                        }
+                    }
+                    
+                    str2+=inner2.selection.value;
+                    
+                    console.log(str1);
+                    console.log(str2);
+                    document.getElementById("result1").innerHTML=str1;
+                    document.getElementById("result2").innerHTML=str2;
+                });
+                //let newChecked = document.createElement("span");
+                //let isChecked = document.querySelectorAll("input");
+
+                /*const javacheckbox = document.getElementById('java');
+                const andcheckbox = document.getElementById('android');
+                const csscheckbox = document.getElementById('css');
+                const htmlcheckbox = document.getElementById('html');
+                const iotcheckbox = document.getElementById('iot');
+                const jscheckbox = document.getElementById('javascript');
+
+                const jbox = document.getElementById('javachecked');
+                const andbox = document.getElementById('andchecked');
+                const cssbox = document.getElementById('csschecked');
+                const htmlbox = document.getElementById('htmlchecked');
+                const iotbox = document.getElementById('iotchecked');
+                const jsbox = document.getElementById('jschecked');
+
+                javacheckbox.addEventListener('click', function handleClick() {
+                if (javacheckbox.checked) {
+                    jbox.style.display = 'inline-block';
+                } else {
+                    jbox.style.display = 'none';
+                }
+                });
+                andcheckbox.addEventListener('click', function handleClick() {
+                if (andcheckbox.checked) {
+                    andbox.style.display = 'inline-block';
+                } else {
+                    andbox.style.display = 'none';
+                }
+                });
+                csscheckbox.addEventListener('click', function handleClick() {
+                if (csscheckbox.checked) {
+                    cssbox.style.display = 'inline-block';
+                } else {
+                    cssbox.style.display = 'none';
+                }
+                });
+                htmlcheckbox.addEventListener('click', function handleClick() {
+                if (htmlcheckbox.checked) {
+                    htmlbox.style.display = 'inline-block';
+                } else {
+                    htmlbox.style.display = 'none';
+                }
+                });
+                iotcheckbox.addEventListener('click', function handleClick() {
+                if (iotcheckbox.checked) {
+                    iotbox.style.display = 'inline-block';
+                } else {
+                    iotbox.style.display = 'none';
+                }
+                });
+                jscheckbox.addEventListener('click', function handleClick() {
+                if (jscheckbox.checked) {
+                    jsbox.style.display = 'inline-block';
+                } else {
+                    jsbox.style.display = 'none';
+                }
+                });*/
+
+
+                /*.addEventListener('change', function handleChange(event) {
+                if (event.target.value === 'iotselected') {
+                    box.style.display = 'inline-block';
+                } else {
+                    box.style.display = 'none';
+                }
+                });*/
+                /*function newChecked(){
+                    let newItem = document.createElement("span");
+                    let onCheck = document.querySelectorAll("input");
+                    let newText = document.createTextNode(onCheck.value);
+                    newItem.appendChild(newText);
+                    let itemList = document.querySelector("#checked");
+                    itemList.insertAfter(itemList.childNodes[0],newItem);
+                    
+                    oncheck.value="";
+                    let onSelect = document.querySelectorAll("#selection");
+                    let newSelected = document.createTextNode(onSelect.value);
+                    newItem.appendChild(newSelected);
+                    let selectList = document.querySelectorAll("#selected");
+                    selectList.insertAfter("#selected", newItem);
+                    onSelect.value="";
+                
+                }*/
+            </script>
+        <!--</form>-->
+    </body>
+</html>
