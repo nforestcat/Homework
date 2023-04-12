@@ -53,6 +53,16 @@ public class Example03 {
 			sum+=sum2;
 		}
 		System.out.println(sum);
+		
+		sum=0;
+		sum2=0;
+		a=0;
+		while(a<100) {
+			a++;
+			sum2+=a;
+			sum+=sum2;
+		}
+		System.out.println(sum);
 	}
 
 }
