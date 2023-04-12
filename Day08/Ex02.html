@@ -24,7 +24,7 @@
             </fieldset>
             <fieldset>
                 <legend>셀렉트</legend>
-                <select name="selection">
+                <select name="selection" id="selection">
                     <option value="JAVA">JAVA</option>
                     <option value="ANDROID">ANDROID</option>
                     <option value="CSS">CSS</option>
@@ -38,6 +38,7 @@
                 <!--<input type="submit" value="전송">-->
                 <input type="button" value="전송" id="btn">
                 <!--<button onclick="newChecked(); return false;">전송</button>-->
+                <input type="button" value="reset" id="reset">
             </fieldset>
             <fieldset>
                 <legend>출력영역</legend>
@@ -64,7 +65,7 @@
                     let checks=document.getElementsByTagName("fieldset");
                     let inner1=checks[0].getElementsByTagName("input");
                     let inner2=checks[1].getElementsByTagName("select");
-                    console.log(inner2);
+                    
                     let str1 = "체크내용 : "
                     let str2 = "셀렉트내용 : "
                     for(const element of inner1){
@@ -80,6 +81,25 @@
                     document.getElementById("result1").innerHTML=str1;
                     document.getElementById("result2").innerHTML=str2;
                 });
+                let resetbtn = document.getElementById("reset");
+                resetbtn.addEventListener("click", function(){
+                    let checks=document.getElementsByTagName("fieldset");
+                    let inner1=checks[0].getElementsByTagName("input");
+                    let str1 = "체크내용 : ";
+                    let str2 = "셀렉트내용 : ";
+                    for (const element of inner1){
+                        if(element.checked){
+                            element.checked = false;
+                        }
+                    }
+                    let inner2=checks[1].getElementsByTagName("select");
+                    if(inner2.selection.value != "JAVA"){
+                        inner2.selection.value = "JAVA";
+                    }
+                    document.getElementById("result1").innerHTML=str1;
+                    document.getElementById("result2").innerHTML=str2;
+
+                })
                 //let newChecked = document.createElement("span");
                 //let isChecked = document.querySelectorAll("input");
 
