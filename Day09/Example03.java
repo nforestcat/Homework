@@ -45,6 +45,14 @@ public class Example03 {
 			sum+=sum2;
 		}
 		System.out.println(sum);
+		
+		sum=0;
+		sum2=0;
+		for (int i = 1; i <=100; i++) {
+			sum2+=i;
+			sum+=sum2;
+		}
+		System.out.println(sum);
 	}
 
 }
