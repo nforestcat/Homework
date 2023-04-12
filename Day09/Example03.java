@@ -15,6 +15,18 @@ public class Example03 {
 		}
 		System.out.println(sum);
 		
+		a = 0;
+		sum = 0;
+		while(a<=100) {
+			if(a%2==0) {
+				sum -=a;
+			} else {
+			sum += a;
+			}
+			a++;
+		}
+		System.out.println(sum);
+		
 		int answer=1;
 		for (a=1; a<=10; a++) {
 			if(a%2!=0) {
@@ -33,6 +45,17 @@ public class Example03 {
 				System.out.println(sum);
 				break;
 			}
+		}
+		sum = 0;
+		a = 1;
+		while(a<=100) {
+			sum += a;
+			if (sum>100) {
+				System.out.println(a);
+				System.out.println(sum);
+				break;
+			}
+			a++;
 		}
 		
 		sum = 0;
