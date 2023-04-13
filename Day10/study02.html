@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>반복문</title>
+    </head>
+    <body>
+
+        <script>
+            let i;
+            for(i = 1 ; i<=100 ; i++){
+                if(i % 2 != 0){
+                    console.log(i);
+                }
+            }
+            console.log("종료시 i값 : "+i);
+            //var let차이
+
+            let plus = 10+20
+            console.log(`테스트${plus}입니다`);
+            //expression language?
+            //``사용으로 +없이 가능(역단따옴표)
+            //내부의${수식 또는 변수명}계산된 결과 표현
+            
+            let itr=0
+            while(itr<5){
+                itr++;
+                console.log(`반복중 : ${itr}`);
+                
+            }
+            console.log(`반복종료 : ${itr}`);
+        </script>
+    </body>
+</html>
