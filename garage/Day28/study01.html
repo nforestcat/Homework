@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+    </head>
+    <body>
+        <script>
+            alert("실행확인");
+        </script>
+        <script>
+            alert("두번확인");
+        </script>
+        <script>
+            let test = "<h1>와!<h1>"; //이름이 test인 변수를 만듬
+            document.write(test);
+
+            /*
+            정의, 조건, 동작
+            */
+            console.log("외부 윗 부분");
+            //*중요* 들여쓰기 엄수, {}포함범위 확인!!!
+            //if문은 {}내부의 내용을 실행할 지 말지를 결정한다.
+            //{}가 없을 경우 if문의 바로 다음에 나오는 ;까지를 if문의 포함범위로 본다.
+            //if(조건); 이렇게 작성한 경우 if문은 바로 종료되고 아래의 내용들은 무조건 실행된다.
+            if(true){
+                console.log("첫번째 내용");
+                console.log("두번째 내용")
+            }//if문 끝
+            console.log("외부 아랫 부분");
+        </script>
+    </body>
+</html>
