@@ -1,0 +1,23 @@
+@charset "UTF-8";
+div{
+    border:1px, solid, black;
+}
+.parent_vw{
+    width: 500px;
+    font-size: 8em;
+    background-color: antiquewhite;
+}
+.child_vw{
+    font-size: 0.5em;
+    width: 50vw;
+    /*보이는 넓이의 반(부모 클래스에서 상속되지 않음*/
+    /*width: 250px;*/
+    /*width: 50%;*/
+    background-color: burlywood;
+}
+.whole{
+    width: 100vw;
+    background-color: aqua;
+    height:500px;
+    font-size: 8rem;
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+    </head>
+    <body>
+        <script>
+            function test (a, b, c) {
+                console.log(a);
+                console.log(a*b);
+                console.log(a*b*c);
+            }
+            test(10, 100);
+            function power1(num){
+                let answer = Math.pow(num, 2);
+                return answer;
+            }
+            function power2(num1, num2){
+                let answer = Math.pow(num1, num2);
+                return answer;
+            }
+            function multiply(num1, num2, num3, num4, num5){
+                let answer = num1 * num2 * num3 * num4 *num5;
+                return answer;
+            }
+            function multiply2(...array){
+                let answer = 1;
+                //for (let i = 0; i < array.length; i++){
+                //    answer *= array[i];
+                //}
+                for(const element of array){
+                    answer *=element;
+                }
+                return answer;
+            }
+            console.log(multiply2(1, 2, 3, 4, 5))
+            function multiplyAll(num1, num2) {
+                let answer = 1;
+                for(num1; num1 <= num2; num1++){
+                    answer *= num1;
+                }
+                return answer;
+            }
+            console.log(multiplyAll(1, 5));
+
+            const max = function max(array){
+                let output = array[0];
+                //output = Math.max(...array);
+                for (let i = 0; i < array.length-1; i++){
+                  if (array[i] > array[i+1]) {
+                        output = array[i];
+                    } else {
+                        output = array[i+1];
+                    }
+                }
+                return output;
+            }
+            console.log(max([1, 2, 3, 4]));
+            
+
+
+        </script>
+    </body>
+</html>

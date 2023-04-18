@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <link rel="stylesheet" href="../css/css04.css" type="text/css">
+    </head>
+    <body>
+        <table>
+            <caption></caption>
+            <tr>
+                <th><label for="student_num">학생수</label></th>
+                <td><input type="tel" id="student_num" name="student_num" placeholder="필수 입력" onkeydown='alert("onkeydown")'></td>
+            </tr>
+            <tr>
+                <th><label for="class_num">학과 과목</label></th>
+                <td><input type="tel" id="class_num" name="class_num" placeholder="필수 입력"></td>
+            </tr>
+            <tr>
+                <th><label for="book_num">전체 교과서 양</label></th>
+                <td><input readonly = "true" type="tel" id="book_num" name="book_num"></td>
+            </tr>
+        </table>   
+        <script>
+            function inputAmt(obj){
+                let p2=(document.getElementById("student_num").value) * obj.value;
+                document.getElementById("book_num").setAttribute("value", p2);
+            }
+            document.getElementById("class_num").onkeyup=function(){
+                inputAmt(this);
+            }
+
+        </script> 
+    </body>
+</html>

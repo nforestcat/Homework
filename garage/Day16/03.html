@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+    </head>
+    
+    <body>
+        <script>
+            let a= 10;
+            let b = 20;
+            let c = 30;
+            function outer_func(){
+                b = 200;
+                c = 300;
+                function inner_func(){
+                    c = 3000;
+                    document.write("1. a = " + a + "<br>");
+                    document.write("1. b = " + b + "<br>");
+                    document.write("1. c = " + c + "<br>");
+
+                }
+                inner_func();
+            }
+            outer_func();
+            //예상은 10 200 3000
+        </script>
+    </body>
+</html>

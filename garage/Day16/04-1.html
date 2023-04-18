@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+    </head>
+    <body>
+        <script>
+            function sum(num1, num2){
+                return num1+num2;
+            }
+            let result = sum(10, 20);
+            document.write("두 수의 합은" + result + "<br>");
+            function sum2(num1, num2, callback){
+                callback(num1+num2);
+            }
+            function print1(result){
+                document.write("합은" + result + "<br>");
+            }
+            sum2(10, 20, print1);
+        </script>
+    </body>
+</html>

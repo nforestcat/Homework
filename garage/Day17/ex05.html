@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+    </head>
+    <body>
+        <script>
+            function triangle(){
+                function area_triangle(width, height){
+                            let area= width * height / 2;
+                            return area;
+                        }
+                        let w = Number(prompt("넓이를 구할 삼각형의 밑변을 입력하시오."));
+                        let h = Number(prompt("넓이를 구할 삼각형의 높이를 입력하시오."));
+                        document.write("넓이는 " + area_triangle(w, h) + " 입니다.");
+            }
+            function rectangle(){
+                function area_rectangle(width, height){
+                            let area= width * height;
+                            return area;
+                        }
+                        let w_r = Number(prompt("넓이를 구할 사각형의 밑변을 입력하시오."));
+                        let h_r = Number(prompt("넓이를 구할 사각형의 높이를 입력하시오."));
+                        document.write("넓이는 " + area_rectangle(w_r, h_r) + " 입니다.");        
+            }
+            function circle(){
+                function area_circle(radius){
+                            let area= Math.PI * Math.pow(radius, 2);
+                            return area;
+                        }
+                        let r = Number(prompt("넓이를 구할 원의 반지름값을 입력하시오."));
+                        document.write("넓이는 " + area_circle(r) + " 입니다.");
+            }
+            
+            function select(selection){
+                while(true){
+                    let selection = Number(prompt("메뉴를 입력하세요 \n1. 삼각형의 넓이, " + "2. 사각형의 넓이, " + "3. 원의 넓이, "));
+                    if(selection == 1 || selection == 2 || selection == 3){
+                        switch(selection){
+                            case 1:
+                                triangle();
+                                break;
+                            case 2:
+                                rectangle();
+                                break;
+                            case 3:
+                                circle();
+                                break;
+                        }
+                        break;
+                    } else {
+                        alert("다시 입력하세요.");
+                    }
+                }
+                
+                
+            }
+            let menu =  0;
+            select(menu);
+        </script>
+    </body>
+</html>

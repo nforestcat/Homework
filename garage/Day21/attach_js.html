@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <link rel="stylesheet" href="css/style01.css" type="text/css">
+        <script src="js/form_check.js"></script>
+    </head>
+    <body onload="document.f1.user_name.focus()">
+        <form id="signup" action="#" method="post" name="f1" onsubmit="submit_chk(this)" onreset="reset_chk(this)">
+            <fieldset>
+                <legend>회원가입</legend>
+                <p>
+                    <label for = "user_name">이름</label>
+                    <input type="text" name="user_name" id="user_name" />
+                </p>
+                <p>
+                    <label for = "user_tel">연락처</label>
+                    <input type="text" name="user_tel" id="user_tel" />
+                </p>
+                <p>
+                    <input type="submit" value="회원가입"/>
+                    <input type="reset" value="가입취소"/>
+                </p>
+            </fieldset>
+        </form>
+    </body>
+</html>

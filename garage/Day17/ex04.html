@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+    </head>
+    <body>
+        <script>
+            function area_circle(radius){
+                let area= Math.PI * Math.pow(radius, 2);
+                return area;
+            }
+            let r = Number(prompt("넓이를 구할 원의 반지름값을 입력하시오."));
+            document.write("넓이는 " + area_circle(r) + " 입니다.");
+        </script>
+    </body>
+</html>

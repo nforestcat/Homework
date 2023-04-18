@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <link rel="stylesheet" href="css/style03.css" type="text/css">
+    </head>
+    <body>
+        <div>
+            <form id="signup" action="result.html" method="get">
+                <fieldset>
+                    <legend>개인정보</legend>
+                    <ul>
+                        <li>
+                            <label for="name" >이름</label>
+                            <input type="text" id="name" name="name" required>
+                        </li>
+                        <li>
+                            <label for="tel">연락처</label>
+                            <input type="tel" id="tel" name="tel" required>
+                        </li>
+                    </ul>
+                </fieldset>
+                <fieldset>
+                    <legend>객실 형태</legend>
+                    <ul>
+                        <li><input type="radio" id="roomtypes" name="roomtype" value="single"><label for="roomtypes">기본형(최대 2인)</label></li>
+                        <li><input type="radio" id="roomtypef" name="roomtype" value="family"><label for="roomtypef">가족형(최대 8인)</label></li>
+
+                    </ul>
+                </fieldset>
+                <div class="btn">
+                <button type="submit">제출</button>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>

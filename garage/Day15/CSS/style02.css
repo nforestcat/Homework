@@ -1,0 +1,42 @@
+@charset "UTF-8";
+ul{
+    list-style: none;
+}
+li{
+    width:120px;
+    margin:10px;
+    display:inline-block;
+}
+li a{
+    padding: 5px 20px;
+    font-size: 14px;
+    text-decoration: none;
+    font-weight: bold;
+}
+a[href="#"] {
+    background-color: yellow;
+    border: 1px solid #ccc;
+    font-weight: normal;
+}
+a[href ^= https]{
+    background-color: indianred;
+    border:1px solid #ccc;
+    font-weight:normal;
+}
+a[href |= ko] {
+    background-color: sienna;
+    border: 1px solid #ccc;
+    font-weight:normal;
+}
+a[href ~= css]{
+    background-color: darkcyan;
+    border: 1px solid #ccc;
+    font-weight:normal;
+}
+a:hover{
+    background-color: yellowgreen;
+}
+a:active{
+    background-color: red;
+    color:white;
+}

@@ -1,0 +1,67 @@
+@charset "UTF-8";
+
+#signup{
+    border:1px solid black;
+    border-radius: 5px;
+    width:350px;
+    padding: 30px 20px;
+    margin: 70px auto;
+}
+
+fieldset{
+    border: 1px solid #ccc;
+    margin-top:30px;
+    margin-bottom: 40px;
+}
+
+legend{
+    font-weight: bold;
+    padding-left: 5px;
+    padding-bottom: 10px;
+}
+
+ul{
+    list-style: none;
+}
+
+ul>li{
+    line-height: 30px;
+    padding: 5px 10px;
+    margin-bottom: 2px;
+}
+
+fieldset:first-of-type label{
+    width:60px;
+    font-size: 13px;
+    display: inline-block;
+}
+
+.space::after{
+    content:"        ";
+}
+
+input:hover{
+    border-color: #f00;
+}
+input:checked + label{
+    color: #f00;
+    font-weight: bold;
+}
+button{
+    border:1px solid #000;
+    padding:  7px 20px;
+    border-radius: 17px;
+    background-color:white;
+    display:inline-block;
+    font-size:1rem;
+}
+
+.btn{  
+    text-align: center;
+}
+/*button {
+    margin:auto;
+    display:block;
+    border-radius: 20px;
+    padding: 7px 25px;
+}*/
