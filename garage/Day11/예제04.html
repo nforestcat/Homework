@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+    </head>
+    <body>
+        <script>
+            var name="test1";
+            function func1(){
+                var name="test2"; // 지역 변수 정의
+                document.write("2. name = " + name, "<br>");
+            }
+            function func2(){
+                var name="test3"; //지역 변수 정의
+                document.write("3. name = " + name, "<br>");
+            }
+            function func3(){
+                name="test4"; //전역 변수 수정
+                document.write("4. name = " + name, "<br>");
+            }
+            document.write("1. name = " + name, "<br>");
+            func1();
+            func2();
+            func3();
+            document.write("5. name = " + name, "<br>");
+            //결과 = 1, 2, 3, 4, 4
+            //앞에서 var을 붙이는 걸로 지역 변수를 선언
+            //var (혹은 let, const) 없이 함수 내에서 재정의 할 경우 재정의한 값으로 입력됨
+        </script>
+    </body>
+</html>

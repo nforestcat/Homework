@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+    </head>
+    <body>
+        <script>
+            let meetingdate = "";
+            function meetAt(year, month, day) {
+                meetingdate = year + "년";
+                if(day == ""){
+                    if(month == "") {
+                        return meetingdate;
+                    } else {
+                        meetingdate += " " + month + "월";
+                        return meetingdate;
+                    }
+                } else {
+                    meetingdate += " " + month + "월 " + day + "일";
+                    return meetingdate;
+                }
+            }
+            let meetingyear = prompt("만나는 년도를 입력해주세요");
+            let meetingmonth = prompt("만나는 월을 입력해주세요");
+            let meetingday = prompt("만나는 일자를 입력해주세요");
+            console.log(meetAt(meetingyear, meetingmonth, meetingday));
+
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+    </head>
+    <body>
+        <script>
+            function createHello() {
+                function hello(user) {
+                    document.write(user+"님 방문을 환영합니다");
+                }
+                return hello;
+            }
+            let result= createHello();
+            result("javascript");
+        </script>
+    </body>
+</html>

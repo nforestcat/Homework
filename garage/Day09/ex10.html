@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+    </head>
+    <body>
+        <script>
+            let m, n, o;
+            m=1;
+            n=9;
+            o=0
+            while(m < 10){
+                while(n>m){
+                    document.write("&nbsp");
+                    n-=2;
+                }
+                while(o<m){
+                    document.write("*");
+                    o++;
+                }
+                document.write("<br>");
+                m+=2;
+                n=9;
+                o=0;
+            }
+            m=1;
+            n=0;
+            o=8;
+            while(m < 8){
+                while(n < m){
+                    document.write("&nbsp");
+                    n+=2
+                }
+                while(o > m) {
+                    document.write("*");
+                    o--;
+                }
+                document.write("<br>");
+                m+=2;
+                n=0;
+                o=8;
+            }
+        </script>
+    </body>
+</html>

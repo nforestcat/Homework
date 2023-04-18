@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset = "UTF-8">
+        <title></title>
+    </head>
+    <body>
+        <script>
+            // while(true) = 무한반복
+            // 패스워드가 1234인지 확인
+            // 1234이면 환영합니다 메시지 출력
+            // 무한 반복 멈춤
+            // 1234가 아니면
+            // 다시 입력하게
+            // 카운트가 없으므로 for문 사용 불가
+            while(true){
+                let value = prompt("패스워드를 입력해주세요.");
+                if (value == "1234") {
+                    alert("환영합니다.");
+                    break;
+                } else {
+                    alert("잘못 입력했습니다. 다시 입력해주세요.");
+                }
+            }
+        </script>
+    </body>
+</html>

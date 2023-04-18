@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+    </head>
+    <body>
+        <script>
+            let i = 1;
+            let sum = 0;
+            while(true) {
+                var num = prompt(i+"번째 입력");
+                i++;
+                if(num == "end") {
+                    alert("입력이 종료 되었습니다.")
+                    break;
+                }
+                num = Number(num);
+                sum += num;
+            }
+            document.write("현재 합은 = " + sum);
+        </script>
+    </body>
+</html>

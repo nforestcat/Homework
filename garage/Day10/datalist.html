@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+    </head>
+    <body>
+        <form action="a.html" method="get">
+            <p>
+                <input type="text" list="city_list">
+                <datalist id="city_list">
+                    <option value="seoul">서울</option>
+                    <option value="jecheon" selected>제천</option>
+                </datalist>
+            </p>
+            <input type="submit" value="a.html에 사용자가 입력한 값을 보내줌">
+            <button>전송</button>
+            <button type="reset">취소</button>
+        </form>
+    </body>
+</html>

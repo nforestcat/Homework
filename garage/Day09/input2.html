@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+    </head>
+    <body>
+
+        <ul>
+            <li>
+                <label><input type="checkbox" id="s_3">선물용 3kg</label>
+                <input type="number" min="0" max="5">개 (최대 5개)
+            </li>
+            <li>
+                <label><input type="checkbox" id="s_5">선물용 5kg</label>
+                <input type="number" min="0" max="3">개 (최대 3개)
+            </li>
+        </ul>
+        <ul>
+            <!--<li>
+                <label><input type="checkbox" id="f_3">가정용 3kg</label>
+                <input type="range" min="0" max="5" id="f3_range"><output id="value"></output>개 (최대 5개)
+            </li>-->
+            <li>
+                <label><input type="checkbox" id="f_3">가정용 3kg</label>
+                <input type="range" min="0" max="5" id="f3_range" oninput="document.getElementById('value1').innerHTML=this.value;"><span id="value1">
+                 <!--<script>
+                    let a = 0;
+                    a = document.getElementById('value1').innerHTML=this.value; 
+                    document.write(a);
+                 </script>-->
+                </span>개 (최대 5개)
+            </li>
+            <li>
+                <label><input type="checkbox" id="f_5">가정용 5kg</label>
+                <input type="range" min="0" max="3" id="f5_range" value="0" class="slider" oninput="document.getElementById('value2').innerHTML=this.value;"><span id="value2">0</span>개 (최대 3개)
+            </li>
+        </ul>
+        <!--<script>
+            const value = document.querySelector("#value")
+            const input = document.querySelector("#f3_range")
+            value.textContent = input.value
+            input.addEventListener("input", (event) => {value.textContent = event.target.value})
+            
+        </script>-->
+    </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset = "UTF-8">
+        <title>
+
+        </title>
+        <script>
+            let star = "";
+            let i;
+            let m;
+            function printStar() {
+                star = "";
+                for (i = 1; i <= 5 ; i++){
+                    for (m = 0; m < i; m++){
+                        star += "*";
+                    }
+                    star += "<br>";
+                }
+                document.write(star)
+                
+            }
+            //단계4. 함수 호출
+            //단계3. 중복 코드 포장하기
+            //단계2. 빈 함수 만들기;
+            //단계1. 함수로 포장할 내용(중복 코드 또는 로작)찾기
+        </script>
+        
+    </head>
+    <body>
+        <script>
+            printStar();
+            printStar();
+        </script>
+    </body>
+</html>

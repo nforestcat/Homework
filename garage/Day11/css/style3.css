@@ -1,0 +1,17 @@
+#id1, #id2{
+    text-align: center;
+}
+ul, ol {
+    list-style: none;
+}
+.bg {
+    background-color: #ddd;
+}
+.accent {
+    border:1px solid #000;
+    padding: 5px;
+}
+.bg2 {
+    color:aliceblue;
+    border: 1px solid #000;
+}

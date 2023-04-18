@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang = "ko">
+    <head>
+        <meta charset = "UTF-8">
+        <title></title>
+    </head>
+    <body>
+        <script>
+            function sample() {
+                let sum = 0;
+                let count = 1;
+                while(true) {
+                    let value = parseInt(window.prompt("수 입력", 1));
+                    if(value == 0){
+                        document.write("종료합니다." + "<br>");
+                        document.write("총 " + count + "번 실행했습니다.");
+                        return 0; //return을 사용하면 어떤 deepth에서도 탈출(함수에서의 탈출)
+                        //break 의 경우 가장 가까운 반복문만 탈출
+                    }
+                    sum+=value;
+                    document.write(count + ". " + sum + "<br>");
+                    count++;
+                }
+                //document.write("총 " + count + "번 실행했습니다.");
+                //여기서는 return을 사용해서 총 횟수가 안 나옴.
+                //break을 사용해야 나옴
+            }
+            sample();
+        </script>
+    </body>
+</html>

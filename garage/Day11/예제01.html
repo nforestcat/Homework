@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+    </head>
+    <body>
+        <script>
+            let i;
+            let name = ""; //굳이 정의 할 필요 없음
+            for (i=1; i<6; i ++){
+                document.write(i + ". 북부" + "<br>");
+            }
+            for (i=1; i<6; i ++){
+                document.write(i + ". 기술교육원" + "<br>");
+            }
+            for (i=1; i<6; i ++){
+                document.write(i + ". IOT" + "<br>");
+            }
+            //함수를 먼저 적고 나중에 불러와야 함
+            function print_write(name) {
+                for (i=1; i<6; i ++){
+                document.write(i + ". " + name + "<br>");
+                }
+            }
+            print_write("융합프로그래밍학과");
+            </script>
+    </body>
+</html>

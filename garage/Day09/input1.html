@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+    </head>
+    <body>
+        <form action="result.html" method="get">
+            <fieldset>
+                <legend>input 태그의 type 한 눈에 살펴보기</legend>
+                <div>
+                    text,<br>
+                    size=10 : 필드 길이 10<br>
+                    value:텍스트필드에 보여지는 값<input type="text" size="10" value="입력창" name="text">
+                
+                </div>
+                <div>
+                    password<input type="password" name="password">
+                </div>
+                <div>
+                    search maxlength=5: 필드에 입력할 수 있는 최대 문자<input type="search" size="10" maxlength="5" name="search">
+                </div>
+                <div>
+                    <label for="url_id">url, 웹 주소 입력하는 필드 http://~로 시작</label><input type="url" value="http://" id="url_id" name="url">
+                </div>
+                <div>
+                    <label for="email_id">email</label><input type="email" id="email_id" name="email">
+                </div>
+                <div>
+                    <label for="tel_id">tel</label><input type="tel" id="tel_id" name="tel" pattern="[0,1]{3}-[0-9]{4}-[0-9]{4}"
+                    required>
+                </div>
+            </fieldset>
+            <input type="submit" value="result.html로 전송">
+        </form>
+    </body>
+</html>

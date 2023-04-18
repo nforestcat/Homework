@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+    </head>
+    <body>
+        <script>
+            let i, j;
+            let m = Number(prompt("몇 단 부터 출력할까요?"));
+            let n = Number(prompt("몇 단 까지 출력할까요?"));
+
+            for (i = m; i <= 9 ; i++) {
+                document.write("<div>");
+                document.write("<h3>" + i + "단</h3>");
+                for (j = 1; j <= 9 ; j++) {
+                    document.write(i + " X " + j + " = " + i*j + "<br>");
+                }
+                document.write("<div>");
+                if(i === n) {
+                    break;
+                }
+                //그러면 prompt로 n을 받아서 3대신 넣으면 n단 까지가 되는거겠네
+            }
+        </script>
+    </body>
+</html>

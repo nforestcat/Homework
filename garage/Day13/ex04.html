@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charse="UTF-8">
+        <title></title>
+    </head>
+    <body>
+        <script>
+            let unit = [50000, 10000, 5000, 1000, 500, 100];
+            let cash = Number(prompt("계산할 금액을 입력하세요", "10000"));
+            let change = Array.from(unit.length);
+            let i;
+            function changeCalculate(money) {
+
+                for (i = 0; i < unit.length; i++){
+                    change[i] = parseInt(money / unit[i]);
+                    money %= unit[i];
+                    document.write(unit[i]+ "X" + change[i] + "<br>")
+                }
+
+            }
+            changeCalculate(cash);
+            
+        </script>
+    </body>
+</html>

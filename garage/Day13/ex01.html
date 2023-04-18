@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+    </head>
+    <body>
+        <script>
+            let rightid = "korea";
+            let rightpw = "1234";
+            function login(id, pwd) {
+                if(id == rightid) {
+                    if(pwd == rightpw) {
+                        document.write(id + " 님 환영합니다!");
+                    } else {
+                        alert("잘못된 비밀번호입니다.");
+                    }
+
+                } else {
+                    alert("아이디가 존재하지 않습니다.");
+
+                }
+            }
+            let userId = prompt("아이디를 입력하세요");
+            let userPw = prompt("비밀번호를 입력하세요");
+            login(userId, userPw);
+
+        </script>
+    </body>
+</html>

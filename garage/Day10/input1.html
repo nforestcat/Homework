@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+    </head>
+    <body>
+        <form action="result.html" method="get">
+            <input type="button" value="공지 창 열기" onclick="window.open('notice.html')">
+            <input type="file" name="file">
+            <textarea id="memo" cols="40" rows="4"></textarea>
+        </form>
+        <form action="result2.html" method="get">
+            <ul id="shipping">
+                <li>
+                    <label for="date">배송 지정</label>
+                    <input id="date" name="ship_date" type="date"><small>(주문일로부터 최소 3일 이후)</small>
+                </li>
+                <li>
+                    <label for="memo">메모</label>
+                    <textarea id="memo" cols="40" rows="4"></textarea>
+
+                </li>
+            </ul>
+            <fieldset>
+                <legend></legend>
+                <div>
+                    <input type="submit" value="주문하기">
+                </div>
+            </fieldset>
+        </form>
+        <form action="result3.html" method="get">
+            <fieldset>
+                <legend>상품 선택</legend>
+                <p><b>주문할 상품을 선택해주세요</b></p>
+                <label for="option">
+
+                </label>
+                <select name="option" id="option">
+                    <option value="special_3" selected>선물용 3kg</option>
+                    <option value="special_5">선물용 5kg</option>
+                    <option value="family_3">가정용 3kg</option>
+                    <option value="family_5">가정용 5kg</option>
+                </select>
+            </fieldset>
+            <input type="submit" value="주문하기">
+        </form>
+
+        
+    </body>
+</html>

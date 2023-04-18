@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+    </head>
+    <body>
+        <script>
+            let star = "";
+            let i;
+            let m;
+            let makestar = function printStar() {
+                star = "";
+                for (i = 1; i <= 5 ; i++){
+                    for (m = 0; m < i; m++){
+                        star += "*";
+                    }
+                    star += "<br>";
+                }
+                document.write(star)
+               
+            }
+            makestar();
+            makestar(); 
+        </script>
+    </body>
+</html>
