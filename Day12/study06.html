@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>포지션</title>
+        <style>
+            #wrap{
+                width: 400px;
+                height: 1200px;
+                background-color: gray;
+                margin: 0 auto;
+            }
+            #wrap div{
+                width: 150px;
+                height: 150px;
+            }
+            #red{
+                background-color: rgba(255, 0, 0, 0.5);
+            }
+            #green{
+                background-color: rgba(0,255, 0, 0.5);
+                position:relative;
+                top:-150px;
+                left:250px;
+            }
+            #blue{
+                background-color: rgba(0, 0, 255, 0.5);
+            }
+            #yellow{
+                background-color: rgba(255, 255, 0, 0.5);
+            }
+        </style>
+    </head>
+    <body>
+        <div id="wrap">
+            <div id="red"></div>
+            <div id="green"></div>
+            <div id="blue"></div>
+            <div id="yellow"></div>
+        </div>
+    </body>
+</html>
