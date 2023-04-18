@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+    </head>
+    <body>
+        <script>
+            var x = 1, y = 1, z = 0, w = 4;
+            
+            document.write((x || y) + "<br>"); //1
+            document.write((x && y) + "<br>"); //1
+            document.write((x && z) + "<br>"); //0
+            document.write((5 > x) + "<br>"); // x는 5보다 작으니 true
+            document.write((y > w) + "<br>"); // y는 w보다 작은데 크다고 물어보니 false
+            document.write((w != z) + "<br>"); // w와 z는 같지 않으니 true
+            document.write((!y) + "<br>"); // 반댓값 false(0은 false 1은 true)
+            document.write((!z) + "<br>"); // true
+        </script>
+    </body>
+</html>

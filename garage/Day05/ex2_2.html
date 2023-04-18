@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            //1. 숫자 입력 받기
+            let number_in = prompt("숫자를 입력하세요.");
+            //문자인지 확인
+            
+            if (typeof (number_in) === 'string' || number_in instanceof String) {
+                alert("숫자를 입력하세요.");
+            } else {
+                number_in = Number(number_in);
+                //2. 0인지 확인
+               if (number_in != 0) {
+                //3. 2의 배수인지 확인
+                if (number_in % 2 === 0) {
+                    alert("짝수입니다.");
+                } else {
+                    alert("홀수입니다.");
+                }
+            } else {
+                alert("0을 입력하셨습니다.");
+            } 
+            }
+            
+            
+        </script>
+    </body>
+</html>

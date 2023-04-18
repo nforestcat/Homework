@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+    </head>
+    <body>
+        <script>
+            let i, j;
+            let p = 1;
+            //변수 초기화
+            for (i = 0; i < 5; i++){
+                document.write("\t" + p);
+                p++;
+            }
+            document.write("<br>");
+            //1부터 5까지 반복하며 출력 후 <br>
+            for (i = 0; i < 5; i++){
+                document.write("\t" + p);
+                p++;
+            }
+            document.write("<br>");
+            for (i = 0; i < 5; i++){
+                document.write("\t" + p);
+                p++;
+            }
+            document.write("<br>");
+            for (i = 0; i < 5; i++){
+                document.write("\t" + p);
+                p++;
+            }
+            document.write("<br>");
+            for (i = 0; i < 5; i++){
+                document.write("\t" + p);
+                p++;
+            }
+            document.write("<br>");
+            //for 하나만 쓰면 반복해서 써야 함
+            p=1;
+            for (i = 1; i < 26; i++){
+                document.write("\t" + p);
+                p++;
+                if(i % 5 === 0){
+                    document.write("<br>");
+                }
+            }
+            //for if문, i가 5의 배수가 되면 줄을 바꾼다
+            p=1;
+            for (j=0; j<5; j++) {
+                for (i = 0; i < 5; i++){
+                    document.write("\t" + p);
+                    p++;
+                }
+                document.write("<br>");
+            }
+            /*이중for문, i가 증가하며 숫자를 출력하고, 안 쪽 for문에서 
+            탈출하면 j의 조건에 따라 줄이 바뀌고 다시 안 쪽 for문이 반복된다 */
+        </script>
+    </body>
+</html>

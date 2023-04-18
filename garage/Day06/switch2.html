@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+    </head>
+    <body>
+        <script>
+            let first_num = prompt("첫 번째 숫자 값을 입력 해주세요.");
+            first_num = Number(first_num)
+            let calc = prompt("사칙연산자 중 하나를 입력해주세요");
+            let second_num = prompt("두 번째 숫자 값을 입력 해주세요.");
+            second_num = Number(second_num)
+
+            switch(calc) {
+                case('+'):
+                    let sum = first_num + second_num;
+                    alert(first_num + calc + second_num + "=" + sum);
+                    break;
+                case('-'): 
+                    let subt = first_num - second_num;
+                    alert(first_num + calc + second_num + "=" + subt);
+                    break;
+                case('*'):
+                    let mult = first_num * second_num;
+                    alert(first_num + calc + second_num + "=" + mult);
+                    break;
+                case('/'):
+                    let divide = first_num / second_num;
+                    alert(first_num + calc + second_num + "=" + divide);
+                    break;
+                default:
+                    alert("연산자를 입력해주세요")
+                } 
+        </script>
+    </body>
+</html>
