@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>포지션 처리</title>
+        <style>
+            /*
+            position: 특정 기준점을 두어 위치를 지정하는 방법
+                static : 기본값, position을 적지 않으면 전부 static이다.
+                relative : 다른 요소와의 관계를 유지하면서 기준점을 잡는 방법
+                    위치 지정이 없다면 본래 자신이 그려진 위치에서 자리잡음
+                    다른 요소들도 해당 요소가 있는 것처럼 자리를 잡음
+                    위치 지정이 있다면 원래 자기가 그려졌던 위치가 기준
+                    단점: 위치 계산해야 함
+                absolute : 다른 요소와의 관계를 무시하고 화면(창)을 기준으로 기준점을 잡는 방법
+                    위치 지정이 없다면 본래 자신이 그려진 위치에서 다른 요소를 무시하고 기준점을 잡는다.
+                    다른 요소들은 해당 absolute가 주어진 요소가 없다고 생각하고 위치를 잡는다.
+                    위치 지정이 있다면 상위 요소 중 position:static이 아닌 요소의 좌측 상단 기준
+                    상위요소 중 어느 요소도 position값이 없다면 화면의 좌측 상단을 기준으로 한다.
+                    스크롤의 영향을 받아 화면 밖으로 사라질 수 있다.
+                fixed : 스크롤 또는 동작까지 무시하고 화면에 기준점을 잡는 방법
+                    absolute와 같이 위치지정이 없다면 본래 자신 위치
+                    위치지정이 있다면 화면 좌측 상단 모서리
+                    스크롤도 무시하고 본인 위치를 고정
+            static이 아닌 position값을 줄 경우
+            위치 지정에 top, left, right, bottom 이라는 속성을 사용할 수 있다
+
+            부모 요소가 static이 아닌 position값을 가지고 있는 경우
+            (해당 요소에서 상위 요소로 <html>올라가는 과정에서 static이 아닌 position을 가진 요소가 기준)
+            absolute의 경우 위치 지정 기준이 부모의 좌측 상단으로 변경된다.
+            relative의 경우 부모의 position여부와는 무관하게 본래 성질대로 동작한다.
+            fixed의 경우 부모의 position여부와는 무관하게 본래 성질대로 동작한다.
+            */
+            #wrap{
+                border: 10px solid black;
+                background-color: beige;
+                width: 400px;
+                height:1200px;
+                margin: 0 auto;
+                position:relative;
+            }
+            .A{
+                height:100px;
+                background-color: rgba(255, 0, 0, 0.3);
+                width: 100px;
+                
+            }
+            .B{
+                height:100px;
+                background-color: rgba(0, 255, 0, 0.3);
+                width: 100px;
+                position:absolute;
+                border-radius: 50%;
+                left: 300px;
+                top: 100px;
+            }
+            .C{
+                height:100px;
+                width: 100px;
+                background-color: rgba(0, 0, 255, 0.3);
+            }
+            .D{
+                height:100px;
+                width: 100px;
+                background-color: rgba(255, 255, 0, 0.3);
+            }
+        </style>
+    </head>
+    <body>
+        <div id="wrap">
+            <div class="A"></div>
+            <div class="B"></div>
+            <div class="C"></div>
+            <div class="D"></div>
+        </div>
+    </body>
+</html>
