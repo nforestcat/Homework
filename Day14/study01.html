@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>함수실행법</title>
+        
+    </head>
+    <body>
+        <input type="button" value="onclick" onclick="test()">
+        <br>
+        <input type="button" value="event" id="event">
+        <br>
+        <input type="button" value="익명함수" id="B">
+        <h1>이거 눌러보세요</h1>
+
+        <script>
+            
+            function test() {
+                alert("실행확인");
+                alert("순서대로 실행됩니다");
+                return "cola";
+            }
+            let btn = document.getElementById("event");
+            
+            
+            //Element.addEventListener("String", function);
+            btn.addEventListener("click", test);
+            //function에 괄호 "없이" 넣기
+
+            let B = document.getElementById("B");
+            B.addEventListener("click", function(){
+                alert("익명함수를 이용한 실행 확인!")
+            });
+
+            let h1 = document.getElementsByTagName("h1")[0];
+            console.log(h1);
+            //기본적으로 배열로 들어옴
+            h1.addEventListener("click", function(){
+                alert("H1이 클릭되었습니다.")
+            });
+        </script>
+    </body>
+</html>
