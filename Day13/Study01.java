@@ -95,6 +95,7 @@ public class Study01 {
 				bayeol[i][j] = v++;
 			}
 		}
+		System.out.println("배열 1 x");
 		for(int i = 0; i < bayeol.length; i++) {
 			for (int j = 0; j < bayeol.length; j++) {
 				System.out.print(bayeol[i][j] + "\t");
@@ -111,9 +112,14 @@ public class Study01 {
 				v++;
 			}
 		}
+		System.out.println("배열 2 2x");
 		for(int i = 0; i < bayeol2.length; i++) {
 			for (int j = 0; j < bayeol2.length; j++) {
-				System.out.print(bayeol2[i][j] + "\t");
+				if(bayeol2[i][j] == 0) {
+					System.out.print(" \t");
+				} else {
+					System.out.print(bayeol2[i][j] + "\t");
+				}
 			}
 			System.out.println();
 		}
@@ -128,9 +134,14 @@ public class Study01 {
 				v++;
 			}
 		}
+		System.out.println("배열 3 3x+1");
 		for(int i = 0; i < bayeol3.length; i++) {
 			for (int j = 0; j < bayeol3.length; j++) {
-				System.out.print(bayeol3[i][j] + "\t");
+				if(bayeol3[i][j] == 0) {
+					System.out.print(" \t");
+				} else {
+					System.out.print(bayeol3[i][j] + "\t");
+				}
 			}
 			System.out.println();
 		}
@@ -145,9 +156,14 @@ public class Study01 {
 				v++;
 			}
 		}
+		System.out.println("배열 4 2x+1");
 		for(int i = 0; i < bayeol4.length; i++) {
 			for (int j = 0; j < bayeol4.length; j++) {
-				System.out.print(bayeol4[i][j] + "\t");
+				if(bayeol4[i][j] == 0) {
+					System.out.print(" \t");
+				} else {
+					System.out.print(bayeol4[i][j] + "\t");
+				}
 			}
 			System.out.println();
 		}
@@ -161,9 +177,14 @@ public class Study01 {
 				v++;
 			}
 		}
+		System.out.println("배열 5 제곱");
 		for(int i = 0; i < bayeol5.length; i++) {
 			for (int j = 0; j < bayeol5.length; j++) {
-				System.out.print(bayeol5[i][j] + "\t");
+				if(bayeol5[i][j] == 0) {
+					System.out.print(" \t");
+				} else {
+					System.out.print(bayeol5[i][j] + "\t");
+				}
 			}
 			System.out.println();
 		}
@@ -179,9 +200,14 @@ public class Study01 {
 				v--;
 			}
 		}
+		System.out.println("배열 6 역순");
 		for(int i = 0; i < bayeol6.length; i++) {
 			for (int j = 0; j < bayeol6.length; j++) {
-				System.out.print(bayeol6[i][j] + "\t");
+				if(bayeol6[i][j] == 0) {
+					System.out.print(" \t");
+				} else {
+					System.out.print(bayeol6[i][j] + "\t");
+				}
 			}
 			System.out.println();
 		}
@@ -195,9 +221,14 @@ public class Study01 {
 			}
 			v = 1;
 		}
+		System.out.println("배열 7 가로 12345");
 		for(int i = 0; i < bayeol7.length; i++) {
 			for (int j = 0; j < bayeol7.length; j++) {
-				System.out.print(bayeol7[i][j] + "\t");
+				if(bayeol7[i][j] == 0) {
+					System.out.print(" \t");
+				} else {
+					System.out.print(bayeol7[i][j] + "\t");
+				}
 			}
 			System.out.println();
 		}
@@ -211,9 +242,14 @@ public class Study01 {
 			}
 			
 		}
+		System.out.println("배열 8 세로쓰기");
 		for(int i = 0; i < bayeol8.length; i++) {
 			for (int j = 0; j < bayeol8.length; j++) {
-				System.out.print(bayeol8[i][j] + "\t");
+				if(bayeol8[i][j] == 0) {
+					System.out.print(" \t");
+				} else {
+					System.out.print(bayeol8[i][j] + "\t");
+				}
 			}
 			System.out.println();
 		}
@@ -227,9 +263,14 @@ public class Study01 {
 			}
 			v++;
 		}
+		System.out.println("배열 9 수직 12345");
 		for(int i = 0; i < bayeol9.length; i++) {
 			for (int j = 0; j < bayeol9.length; j++) {
-				System.out.print(bayeol9[i][j] + "\t");
+				if(bayeol9[i][j] == 0) {
+					System.out.print(" \t");
+				} else {
+					System.out.print(bayeol9[i][j] + "\t");
+				}
 			}
 			System.out.println();
 		}
@@ -243,9 +284,14 @@ public class Study01 {
 			}
 			
 		}
+		System.out.println("배열 10 위 삼각형");
 		for(int i = 0; i < bayeol10.length; i++) {
 			for (int j = 0; j < bayeol10.length; j++) {
-				System.out.print(bayeol10[i][j] + "\t");
+				if(bayeol10[i][j] == 0) {
+					System.out.print(" \t");
+				} else {
+					System.out.print(bayeol10[i][j] + "\t");
+				}
 			}
 			System.out.println();
 		}
@@ -260,9 +306,14 @@ public class Study01 {
 			}
 			
 		}
+		System.out.println("배열 11 위 삼각형 2x");
 		for(int i = 0; i < bayeol11.length; i++) {
 			for (int j = 0; j < bayeol11.length; j++) {
-				System.out.print(bayeol11[i][j] + "\t");
+				if(bayeol11[i][j] == 0) {
+					System.out.print(" \t");
+				} else {
+					System.out.print(bayeol11[i][j] + "\t");
+				}
 			}
 			System.out.println();
 		}
@@ -277,9 +328,14 @@ public class Study01 {
 			}
 			
 		}
+		System.out.println("배열 12 위 삼각형 제곱");
 		for(int i = 0; i < bayeol12.length; i++) {
 			for (int j = 0; j < bayeol12.length; j++) {
-				System.out.print(bayeol12[i][j] + "\t");
+				if(bayeol12[i][j] == 0) {
+					System.out.print(" \t");
+				} else {
+					System.out.print(bayeol12[i][j] + "\t");
+				}
 			}
 			System.out.println();
 		}
@@ -294,9 +350,14 @@ public class Study01 {
 			}
 			
 		}
+		System.out.println("배열 13 위 삼각형 j");
 		for(int i = 0; i < bayeol13.length; i++) {
 			for (int j = 0; j < bayeol13.length; j++) {
-				System.out.print(bayeol13[i][j] + "\t");
+				if(bayeol13[i][j] == 0) {
+					System.out.print(" \t");
+				} else {
+					System.out.print(bayeol13[i][j] + "\t");
+				}
 			}
 			System.out.println();
 		}
@@ -311,9 +372,14 @@ public class Study01 {
 			}
 			
 		}
+		System.out.println("배열 14 위 삼각형 2x+1");
 		for(int i = 0; i < bayeol14.length; i++) {
 			for (int j = 0; j < bayeol14.length; j++) {
-				System.out.print(bayeol14[i][j] + "\t");
+				if(bayeol14[i][j] == 0) {
+					System.out.print(" \t");
+				} else {
+					System.out.print(bayeol14[i][j] + "\t");
+				}
 			}
 			System.out.println();
 		}
@@ -329,9 +395,14 @@ public class Study01 {
 			}
 			
 		}
+		System.out.println("배열 15 위 삼각형 역순");
 		for(int i = 0; i < bayeol15.length; i++) {
 			for (int j = 0; j < bayeol15.length; j++) {
-				System.out.print(bayeol15[i][j] + "\t");
+				if(bayeol15[i][j] == 0) {
+					System.out.print(" \t");
+				} else {
+					System.out.print(bayeol15[i][j] + "\t");
+				}
 			}
 			System.out.println();
 		}
@@ -346,9 +417,14 @@ public class Study01 {
 			}
 			
 		}
+		System.out.println("배열 16 밑 삼각형");
 		for(int i = 0; i < bayeol16.length; i++) {
 			for (int j = 0; j < bayeol16.length; j++) {
-				System.out.print(bayeol16[i][j] + "\t");
+				if(bayeol16[i][j] == 0) {
+					System.out.print(" \t");
+				} else {
+					System.out.print(bayeol16[i][j] + "\t");
+				}
 			}
 			System.out.println();
 		}
@@ -373,16 +449,17 @@ public class Study01 {
 						bayeol17[i][j] = -1;
 					}
 					break;
-				
 				}
-				
-				
 			}
-			
 		}
+		System.out.println("배열 17 1 or -1");
 		for(int i = 0; i < bayeol17.length; i++) {
 			for (int j = 0; j < bayeol17.length; j++) {
-				System.out.print(bayeol17[i][j] + "\t");
+				if(bayeol17[i][j] == 0) {
+					System.out.print(" \t");
+				} else {
+					System.out.print(bayeol17[i][j] + "\t");
+				}
 			}
 			System.out.println();
 		}
@@ -403,14 +480,20 @@ public class Study01 {
 				v++;
 			}
 		}
+		System.out.println("배열 18 모래시계");
 		for(int i = 0; i < bayeol18.length; i++) {
 			for (int j = 0; j < bayeol18.length; j++) {
-				System.out.print(bayeol18[i][j] + "\t");
+				if(bayeol18[i][j] == 0) {
+					System.out.print(" \t");
+				} else {
+					System.out.print(bayeol18[i][j] + "\t");
+				}
 			}
 			System.out.println();
 		}
 		v = 1;
 		System.out.println();
+		
 		
 		int[][] bayeol19 = new int [5][5];
 		for(int i = 0; i < bayeol19.length; i++) {
@@ -426,9 +509,14 @@ public class Study01 {
 				v++;
 			}
 		}
+		System.out.println("배열 19 나비");
 		for(int i = 0; i < bayeol19.length; i++) {
 			for (int j = 0; j < bayeol19.length; j++) {
-				System.out.print(bayeol19[i][j] + "\t");
+				if(bayeol19[i][j] == 0) {
+					System.out.print(" \t");
+				} else {
+					System.out.print(bayeol19[i][j] + "\t");
+				}
 			}
 			System.out.println();
 		}
@@ -468,9 +556,14 @@ public class Study01 {
 			bayeol20[2][i] = v;
 			v++;
 		}
+		System.out.println("배열 20 소용돌이");
 		for(int i = 0; i < bayeol20.length; i++) {
 			for (int j = 0; j < bayeol20.length; j++) {
-				System.out.print(bayeol20[i][j] + "\t");
+				if(bayeol20[i][j] == 0) {
+					System.out.print(" \t");
+				} else {
+					System.out.print(bayeol20[i][j] + "\t");
+				}
 			}
 			System.out.println();
 		}
@@ -490,10 +583,16 @@ public class Study01 {
 				v++;
 			}
 		}
+		System.out.println("배열 21 마름모");
 		for(int i = 0; i < bayeol21.length; i++) {
 			for (int j = 0; j < bayeol21.length; j++) {
-				System.out.print(bayeol21[i][j] + "\t");
+				if(bayeol21[i][j] == 0) {
+					System.out.print(" \t");
+				} else {
+					System.out.print(bayeol21[i][j] + "\t");
+				}
 			}
+			
 			System.out.println();
 		}
 		v = 1;
@@ -516,9 +615,14 @@ public class Study01 {
 				break;
 			}
 		}
+		System.out.println("배열 22 뱀");
 		for(int i = 0; i < bayeol22.length; i++) {
 			for (int j = 0; j < bayeol22.length; j++) {
-				System.out.print(bayeol22[i][j] + "\t");
+				if(bayeol22[i][j] == 0) {
+					System.out.print(" \t");
+				} else {
+					System.out.print(bayeol22[i][j] + "\t");
+				}
 			}
 			System.out.println();
 		}
