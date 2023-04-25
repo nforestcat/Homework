@@ -2,7 +2,7 @@
 <html lang="ko">
     <head>
         <meta charset="UTF-8">
-        <title></title>
+        <title>이벤트 처리</title>
     </head>
     <body>
         <div id="wrap">
@@ -11,6 +11,23 @@
             <input type="text" id="address" placeholder="주소를 입력">
             <br>
             <input type="button" id="btn" value="클릭!" onclick="getText()">
+            <br>
+            <a href="#">링크1</a>
+            <br>
+            <a href="#">링크2</a>
+            <br>
+            <a href="#">링크3</a>
+            <br>
+            <a href="#user">링크4</a>
+            <div id="indiv">
+                <ul>
+                    <li>리스트1</li>
+                    <li id="li2">리스트2</li>
+                    <li>리스트3</li>
+                    <li>리스트4</li>
+                    <li>리스트5</li>
+                </ul>
+            </div>
         </div>
         <script>
             let add=document.getElementById("address");
@@ -35,6 +52,31 @@
             }
             //*X5,000,000
             //e.target : 현재 동작을 실행시킨 요소를 특정해냄
+
+            //*X5,000,000
+            let links=document.getElementsByTagName("a");
+            console.log(links);
+            //둘 사이에는 데이터를 입력할 때 태그를 Element로 추가하느냐 Text로 추가하느냐의 차이가 있다
+            //innerHTML : 태그를 입력하면 태그의 기능이 온전히 발현
+            //innerText : 태그를 입력하면 태그 모양의 문자가 입력
+            let result = links[2];
+            result.innerHTML="<span style='color:red'>이거로 변경</span>"
+
+            let li2=document.getElementById("li2");
+            console.log(li2);
+            let parent=li2.parentNode;
+            console.log(parent);
+            //firstChild, lastChild
+            let child = parent.lastChild;
+            console.log(child.nodeVaule);
+            //previousSibling : 형제요소 중 바로 앞에 나오는 형제를 추출, 대부분의 경우 #text임
+            //nextSibling : 형제요소 중 바로 다음에 나오는 형제를 추출, 대부분의 경우 #text임
+            console.log(li2.previousSibling);
+
+
+            //previousElementSibling : 형제요소 중 바로 앞에 Element인 형제를 추출
+            //nextElementSibling : 형제요소 중 바로 뒤에 Element인 형제를 추출
+            console.log(li2.previousElementSibling);
         </script>
     </body>
 </html>
