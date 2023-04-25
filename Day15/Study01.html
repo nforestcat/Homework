@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <h1 id="test">ID가 있는 경우</h1>
+        <h1>아무것도 없는 경우</h1>
+        <h1 class="sample">class가 있는 경우</h1>
+        <script>
+            //DOM을 통한 ELEMENT특정
+            //document : 현재 보고 있는 문서 전체
+            console.log(document);
+
+            //getElementById("String") : id를 기준으로 특정 태그를 추출
+            //getElementsByTagName("String") : 태그명을 기준으로 태그'들'을 추출
+            // 태그가 여러개일 수 있으므로 Collection의 타입으로 추출되며
+            // 사용을 위해서는 번호를 특정해줘야 한다.
+            //getElementsByClassName("String") : class를 기준으로 특정 태그'들'을 추출
+            // 태그가 여러개일 수 있으므로 Collection의 타입으로 추출되며
+            // 사용을 위해서는 번호를 특정해줘야 한다.
+
+            let ById=document.getElementById("test");
+            console.log(ById);
+            let ByTagName=document.getElementsByTagName("h1");
+            console.log(ByTagName[1]);
+            let ByClassName=document.getElementsByClassName("sample");
+            console.log(ByClassName[0]);
+
+            //특정된 Element로부터 정보를 취득하는 방법
+            //nodeName : 추출된 노드의 이름을 확인 return String
+            //nodeValue : 추출된 노드의 값을 확인 return String
+            //nodeType : 추출된 노드의 타입을 확인 return int
+            console.log(ById.nodeName);
+            console.log(ById.nodeValue);
+            console.log(ById.nodeType);
+            //nodeType 1번 ElementNode는 내부에 문자 데이터를 보유할 수 없다.
+            //해당 문자데이터는 ElementNode안에 있는 TextNode가 가지고 있다.
+            //따라서 문자데이터를 취득하기 위해서는 TextNode를 특정해야 한다.
+            console.log(ById.firstChild.nodeType);
+            
+            //nodeType
+            //1. ElementNode : <h1>
+            //2. AttributeNode : id="test"
+            //3. TextNode : 문자가 저장되어 있는 부분
+        </script>
+    </body>
+</html>

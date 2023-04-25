@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+    </head>
+    <body>
+        <div id="wrap">
+            <input type="text" id="user" placeholder="아이디를 입력">
+            <br>
+            <input type="text" id="address" placeholder="주소를 입력">
+            <br>
+            <input type="button" id="btn" value="클릭!" onclick="getText()">
+        </div>
+        <script>
+            let add=document.getElementById("address");
+            console.log(add);
+            add.focus();
+            //Element.focus() : 해당 요소로 커서를 이동하고 강조시킴
+            //activeElement : 현재 포커스되어있는 요소를 가져옴
+            console.log(document.activeElement);
+
+            function getText(){
+                if(add.value==""){
+                    alert("주소가 입력되지 않았습니다.");
+                    add.focus();
+                }
+                console.log(add.value);
+            }
+            //addEventListener("상황", 동작);
+            document.addEventListener("click", test);
+            function test(e){
+                console.log(e.target);
+                /*e.target.style.backgroundColor="red";*/
+            }
+            //*X5,000,000
+            //e.target : 현재 동작을 실행시킨 요소를 특정해냄
+        </script>
+    </body>
+</html>
